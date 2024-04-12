@@ -6,7 +6,7 @@
 /*   By: emansoor <emansoor@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 07:41:43 by emansoor          #+#    #+#             */
-/*   Updated: 2024/04/12 11:58:12 by emansoor         ###   ########.fr       */
+/*   Updated: 2024/04/12 12:32:09 by emansoor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ static int	check_int(char *str)
 	len = ft_strlen(str);
 	while (str[index] != '\0')
 	{
-		if (ft_isdigit(str[index]) || (index == 0 && str[index] == '-' && len > 1)
+		if (ft_isdigit(str[index])
+			|| (index == 0 && str[index] == '-' && len > 1)
 			|| (index == 0 && str[index] == '+' && len > 1))
 			index++;
 		else
