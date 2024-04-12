@@ -6,7 +6,7 @@
 /*   By: emansoor <emansoor@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 09:53:27 by emansoor          #+#    #+#             */
-/*   Updated: 2024/04/12 10:37:03 by emansoor         ###   ########.fr       */
+/*   Updated: 2024/04/12 12:25:34 by emansoor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,7 @@ int	main(int argc, char **argv)
 	t_list	*stack_a;
 
 	if (argc < 2)
-		return (0);
-	if (ft_strlen(argv[1]) == 0)
-		return (0);
+		return (1);
 	stack_a = input_validator(argv, &stack_a);
 	if (stack_a)
 	{

@@ -6,7 +6,7 @@
 /*   By: emansoor <emansoor@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 07:41:43 by emansoor          #+#    #+#             */
-/*   Updated: 2024/04/12 09:05:07 by emansoor         ###   ########.fr       */
+/*   Updated: 2024/04/12 11:58:12 by emansoor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 /*
 checks if given number in array format overflows
 */
-static int	check_for_overflow(char *array)
+static int	check_for_overflow(char *str)
 {
-	if ((array[0] == '-' && ft_atoi(array) >= 0) || (array[0] != '-'
-			&& ft_atoi(array) < 0))
+	if ((str[0] == '-' && ft_atoi(str) >= 0) || (str[0] != '-'
+			&& ft_atoi(str) < 0))
 		return (0);
 	return (1);
 }
@@ -25,15 +25,17 @@ static int	check_for_overflow(char *array)
 /*
 checks if char array converted to int fullfills the requirements for an int
 */
-static int	check_int(char *array)
+static int	check_int(char *str)
 {
 	int	index;
+	int	len;
 
 	index = 0;
-	while (array[index] != '\0')
+	len = ft_strlen(str);
+	while (str[index] != '\0')
 	{
-		if (ft_isdigit(array[index]) || (index == 0 && array[index] == '-')
-			|| (index == 0 && array[index] == '+'))
+		if (ft_isdigit(str[index]) || (index == 0 && str[index] == '-' && len > 1)
+			|| (index == 0 && str[index] == '+' && len > 1))
 			index++;
 		else
 			return (0);
