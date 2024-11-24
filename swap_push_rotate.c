@@ -6,7 +6,7 @@
 /*   By: emansoor <emansoor@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 07:59:06 by emansoor          #+#    #+#             */
-/*   Updated: 2024/04/12 10:01:20 by emansoor         ###   ########.fr       */
+/*   Updated: 2024/11/24 16:04:09 by emansoor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void	swap(t_list *stack, int c)
 			stack->content = nextnode->content;
 			nextnode->content = temp;
 			if (c == 97)
-				ft_putstr("sa\n");
+				ft_putstr_fd("sa\n", 1);
 			else if (c == 98)
-				ft_putstr("sb\n");
+				ft_putstr_fd("sb\n", 1);
 			else
 			{
 			}
@@ -49,7 +49,7 @@ void	swap_both(t_list *stack_a, t_list *stack_b)
 {
 	swap(stack_a, 0);
 	swap(stack_b, 0);
-	ft_putstr("ss\n");
+	ft_putstr_fd("ss\n", 1);
 }
 
 /*
@@ -65,9 +65,9 @@ void	push(t_list **from, t_list **to, int c)
 		*from = src->next;
 		ft_lstadd_front(to, src);
 		if (c == 97)
-			ft_putstr("pa\n");
+			ft_putstr_fd("pa\n", 1);
 		else if (c == 98)
-			ft_putstr("pb\n");
+			ft_putstr_fd("pb\n", 1);
 	}
 }
 
@@ -85,9 +85,9 @@ void	rotate(t_list **stack, int c)
 	temp->next = NULL;
 	ft_lstadd_back(stack, temp);
 	if (c == 97)
-		ft_putstr("ra\n");
+		ft_putstr_fd("ra\n", 1);
 	else if (c == 98)
-		ft_putstr("rb\n");
+		ft_putstr_fd("rb\n", 1);
 	else
 	{
 	}
@@ -100,5 +100,5 @@ void	rotate_both(t_list **stack_a, t_list **stack_b)
 {
 	rotate(stack_a, 0);
 	rotate(stack_b, 0);
-	ft_putstr("rr\n");
+	ft_putstr_fd("rr\n", 1);
 }
