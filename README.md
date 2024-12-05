@@ -1,6 +1,6 @@
 # 42Push_swap
 
-A program implementing bucket sort type sorting algorithm to sort a stack with a limited set of instructions and the smallest number of moves using two stacks (A and B). In the beginning, stack A contains unsorted input given to the program and stack B is empty. In the end, stack A will contain the sorted input starting from the smallest number. Stack B will empty in the end. 
+A 42 school project of a program implementing bucket sort type sorting algorithm to sort a stack with a limited set of instructions and the smallest number of moves using two stacks (A and B). In the beginning, stack A contains unsorted input given to the program and stack B is empty. In the end, stack A will contain the sorted input starting from the smallest number. Stack B will empty in the end. 
 
 The program is optimized for stack sizes equal to and smaller than 500 numbers. Accepted input values should be of type `integer` and belong in the range of `INT_MAX` and `INT_MIN`.
 
